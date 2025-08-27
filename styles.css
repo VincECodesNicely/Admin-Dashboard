@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
+:root {
+  --primary-blue: #4269f5;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -19,9 +23,9 @@ body {
   grid-auto-rows: auto;
   display: grid;
   gap: -20px;
-  background-color: #4269f5;
+  background-color: var(--primary-blue);
   height: 100vh;
-  width: 200px;
+  width: 250px;
   align-items: center;
   color: white;
   font-weight: bold;
@@ -54,6 +58,7 @@ body {
   display: flex;
   align-items: center;
   gap: 6px;
+  cursor: pointer;
 }
 
 .link img {
@@ -74,7 +79,9 @@ body {
   height: 150px;
   margin-left: 200px;
   z-index: 90;
-  box-shadow: 10px 2px 5px black;
+  -webkit-box-shadow: 0 4px 6px -6px #222;
+  -moz-box-shadow: 0 4px 6px -6px #222;
+  box-shadow: 0 4px 6px -6px #222;
   justify-content: center;
   align-items: center;
 }
@@ -125,12 +132,60 @@ input {
   margin-left: 20px;
 }
 
+.welcome-user-section {
+  position: relative;
+  top: 60px;
+  left: 100px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.welcome-user-section img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.greeting-block {
+  display: grid;
+  position: relative;
+  left: 10px;
+  width: 18.75rem;
+}
+
+.greeting-block p {
+  font-weight: bold;
+}
+
+.button-container {
+  display: grid;
+  position: relative;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: fit-content;
+  gap: 6px;
+  left: 400px;
+}
+
+.button-container button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 5px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+}
+
 .main-content {
   position: absolute;
   display: grid;
   grid-template-columns: 2fr 1fr;
+  column-gap: 180px;
   top: 160px;
-  left: 210px;
+  left: 270px;
   width: 100%;
   height: 100%;
   z-index: 1000;
@@ -139,21 +194,30 @@ input {
 .card-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 5px;
+  gap: 10px;
+  position: relative;
+  top: 10px;
 }
 
 .project-cards {
-  width: 300px;
-
-  height: 150px;
-  border: 1px solid black;
+  width: 400px;
+  height: 200px;
+  -moz-box-shadow: 0 0 3px #ccc;
+  -webkit-box-shadow: 0 0 3px #ccc;
+  box-shadow: 0 0 3px #ccc;
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  overflow-x: hidden;
 }
 
 .bulletin-board {
   position: absolute;
-  right: 250px;
-  top: 10px;
+  display: grid;
+  right: 300px;
+  top: 20px;
   width: fit-content;
+  gap: 40px;
 }
 
 .news-container {
