@@ -253,6 +253,13 @@ input {
   margin-right: 10px;
   overflow-y: hidden;
 }
+.announcement-h3 {
+  padding-bottom: 10px;
+}
+
+.trend-h3 {
+  padding-bottom: 10px;
+}
 
 .announcement-board {
   display: flex;
@@ -294,10 +301,34 @@ input {
 
 .trending-board {
   background-color: white;
-  height: 250px;
+  height: 255px;
   width: 250px;
   -moz-box-shadow: 0 0 3px #ccc;
   -webkit-box-shadow: 0 0 3px #ccc;
   box-shadow: 0 0 3px #ccc;
   border-radius: 5px;
+  padding: 10px;
+}
+
+.trending-profile {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  align-items: center;
+}
+
+.status h3 {
+  font-size: 12px;
+}
+
+.status p {
+  font-size: 12px;
+  color: rgb(130, 126, 126);
+}
+
+.trending-profile img {
+  width: 50px;
+  border-radius: 50%;
 }
